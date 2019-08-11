@@ -63,5 +63,20 @@ public class App
         BookDAO bookDAO = new BookDAO();
         bookDAO.insertBook(book);
 
+
+
+        for(Book b: bookDAO.findAllBooks()){
+            System.out.println("Ksiazka: " + b.getTitle());
+            System.out.println("Kategoria: " + b.getCategory().getName());
+
+            for(Author author: b.getAuthors()){
+                System.out.println("Autor: " + author.getName());
+            }
+
+            System.out.println("=========");
+        }
+
+
+
     }
 }

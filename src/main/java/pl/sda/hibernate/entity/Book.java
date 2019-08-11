@@ -14,6 +14,14 @@ import static org.hibernate.annotations.CascadeType.SAVE_UPDATE;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@NamedQueries({
+        @NamedQuery(
+                name = "selectBooks",
+                query = "SELECT DISTINCT b FROM Book b" +
+                        " JOIN FETCH b.authors" +
+                        " JOIN fetch b.category"
+        )
+})
 public class Book {
     @Id
     @GeneratedValue
