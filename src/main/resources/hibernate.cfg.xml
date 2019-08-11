@@ -20,6 +20,9 @@
 
         <property name="hbm2ddl.auto">update</property>
         <mapping class="pl.sda.hibernate.entity.User"></mapping>
+        <mapping class="pl.sda.hibernate.entity.Author"></mapping>
+        <mapping class="pl.sda.hibernate.entity.Category"></mapping>
+        <mapping class="pl.sda.hibernate.entity.Book"></mapping>
 
         <!--        <mapping class="com.sdajava.hibernate.entity.BooksEntity"/>-->
         <!-- DB schema will be updated if needed -->
