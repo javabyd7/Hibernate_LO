@@ -13,6 +13,7 @@ public class CategoryService {
 
     public void save(Category category){
         //walidacja
+        categoryDAO.openSession();
         categoryDAO.save(category);
         categoryDAO.closeCurrentSession();
     }

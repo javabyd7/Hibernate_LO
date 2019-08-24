@@ -14,6 +14,10 @@ public class CategoryDAO implements DaoInterface<Category>{
     private Transaction currentTransaction;
 
     public CategoryDAO(){
+
+    }
+
+    public void openSession(){
         currentSession = HibernateUtils.getSession();
         currentTransaction = currentSession.beginTransaction();
     }

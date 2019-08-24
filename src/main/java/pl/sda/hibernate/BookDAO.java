@@ -13,7 +13,6 @@ public class BookDAO {
         Transaction transaction = session.beginTransaction();
         session.save(book);
         transaction.commit();
-        HibernateUtils.closeSession();
         return book;
     }
 
